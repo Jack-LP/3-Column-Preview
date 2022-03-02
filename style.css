@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Lexend+Deca:100,200,300,regular,500,600,700,800,900);
+
+@import url(https://fonts.googleapis.com/css?family=Big+Shoulders+Display:100,200,300,regular,500,600,700,800,900);
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+    --font-size: 15px;
+    --lexend: "Lexend Deca";
+    --shoulders: "Big Shoulders Display";
+    --radius: 15px;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--Very-light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 60%;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    padding: 60px;
+    justify-content: space-between;
+}
+
+.title{
+    font-family: var(--shoulders);
+    font-weight: 700;
+    color: var(--Very-light-gray);
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.description{
+    font-family: var(--lexend);
+    font-weight: 400;
+    color: var(--Transparent-white);
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.learn-more-btn{
+    outline: none;
+    border: none;
+    padding: 15px 40px 15px 40px;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-family: var(--lexend);
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.learn-more-btn:hover{
+    background-color: transparent;
+    color: var(--Transparent-white);
+    border: 1px solid var(--Very-light-gray);
+}
+
+.btn1{
+    color: var(--Bright-orange);
+}
+
+.btn2{
+    color: var(--Dark-cyan);
+}
+
+.btn3{
+    color: var(--Very-dark-cyan);
+}
+
+.col1{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+
+.col2{
+    background-color: var(--Dark-cyan);
+}
+
+.col3{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+}
+
+
+@media only screen and (max-width: 1860px) {
+    .description{
+        line-height: 24px;
+    }
+}
+
+@media only screen and (max-width: 1530px) {
+    main{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1415px) {
+    main{
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    main{
+        width: 90%;
+    }
+}
+
+
+@media only screen and (max-width: 995px) {
+    main{
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 885px) {
+    body{
+        align-items: flex-start;
+        height: auto;
+    }
+    
+    main{
+        display: grid;
+        margin: 100px 0 100px 0;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+        width: 90%;
+    }
+
+    .title{
+        font-size: 3.5rem;
+    }
+    
+    .description{
+        font-size: 1.4rem;
+        line-height: 30px;
+    }
+    
+    .learn-more-btn{
+        font-size: 1.4rem;
+    }
+
+    .pictogram > img{
+        height: 55px;
+    }
+
+    .col1{
+        border-top-left-radius: var(--radius);
+        border-top-right-radius: var(--radius);
+        border-bottom-left-radius: 0;
+    }
+
+    .col3{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--radius);
+    }
+}
